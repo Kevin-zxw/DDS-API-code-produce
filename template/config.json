@@ -1,0 +1,31 @@
+{
+    "main_file":"main_temp.txt",
+    "main_name":"main.cpp",
+	"ImplC_file":"MessageDataReaderListenerImplC_temp.txt",
+    "ImplC_name":"MessageDataReaderListenerImpl.cpp",
+	"ImplH_file":"MessageDataReaderListenerImplH_temp.txt",
+    "ImplH_name":"MessageDataReaderListenerImpl.h",
+	"PublisherC_file":"PublisherC_temp.txt",
+    "PublisherC_name":"SOAP_Publisher.cpp",
+	"PublisherH_file":"PublisherH_temp.txt",
+    "PublisherH_name":"SOAP_Publisher.h",
+	"SubscriberC_file":"SubscriberC_temp.txt",
+    "SubscriberC_name":"SOAP_Subscriber.cpp",
+	"SubscriberH_file":"SubscriberH_temp.txt",
+    "SubscriberH_name":"SOAP_Subscriber.h",
+	
+	"P": "%P",
+	"t": "%t",
+	"d": "%d",
+	"s": "%s",
+	"u": "%u",
+	
+    "XXXPublisher":"SOAP_Publisher",
+	"Publisher_def":"SOAP_PUBLISHER",
+	"XXXSubscriber":"SOAP_Subscriber",
+	"Subscriber_def":"SOAP_SUBSCRIBER",
+	
+    "Topic_name":"SoapMsg",
+	"Request_name":"SoapMsgerRequest",
+	"Result_name":"SoapMsgerResult"
+}

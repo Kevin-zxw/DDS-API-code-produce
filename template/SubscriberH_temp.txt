@@ -1,0 +1,33 @@
+#ifndef %(Subscriber_def)s_H_
+#define %(Subscriber_def)s_H_
+
+#include "idl/%(Topic_name)sTypeSupportImpl.h"
+#include <dds/DCPS/Service_Participant.h>
+#include <functional>
+
+class %(XXXSubscriber)s {
+public:
+
+  %(XXXSubscriber)s(int argc, char* argv[]);
+  ~%(XXXSubscriber)s();
+  void setReceivedTopicFunction(std::function<void (const %(Topic_name)s::%(Result_name)s&)> tf);
+
+private:
+
+  void createParticipant(int argc, char* argv[]);
+  void createSubscriber();
+  void registerTopic();
+  void createDataReader();
+
+private:
+
+  DDS::DomainParticipantFactory_var m_participantFactory;
+  DDS::DomainParticipant_var m_participant;
+  DDS::Subscriber_var m_subscriber;
+  %(Topic_name)s::%(Result_name)sTypeSupport_var m_topicSupport;
+  DDS::Topic_var m_messageTopic;
+  DDS::DataReaderListener_var m_listener;
+  DDS::TopicQos m_defaultQoS;
+};
+
+#endif // !%(Subscriber_def)s_H_

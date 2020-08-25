@@ -1,0 +1,22 @@
+module SoapMsg{
+    @topic
+    struct SoapMsgerRequest{
+        @key long key_id;
+        string soap_content;
+        long count;
+        long client_id;    // 标记服务消费者 id
+		long session_id;    // 标记服务消费者 某次访问ID
+		long request_time; //定义 服务消费者发送时间
+		long result_time;  // 定义 发送时间
+    };
+	@topic
+    struct SoapMsgerResult{
+        @key long key_id;
+        string soap_content;
+        long count;
+        long client_id;    // 标记服务消费者 id
+		long session_id;    // 标记服务消费者 某次访问ID
+		long request_time; //定义 服务消费者发送时间
+		long result_time;  // 定义 发送时间
+    };
+};

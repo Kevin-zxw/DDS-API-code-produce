@@ -1,0 +1,35 @@
+#ifndef %(Publisher_def)s_H_
+#define %(Publisher_def)s_H_
+
+#include "idl/%(Topic_name)sTypeSupportImpl.h"
+#include <dds/DCPS/Service_Participant.h>
+#include <string>
+
+class %(XXXPublisher)s {
+public:
+
+  %(XXXPublisher)s(int argc, char* argv[]);
+  ~%(XXXPublisher)s();
+
+  void sendMessage(%(Topic_name)s::%(Request_name)s& topic);
+
+private:
+
+  void createParticipant(int argc, char* argv[]);
+  void createPublisher();
+  void registerTopic();
+  void createDataWriter();
+
+private:
+// 客户度，发送的是 Request消息
+  DDS::DomainParticipantFactory_var m_participantFactory;
+  DDS::DomainParticipant_var m_participant;
+  DDS::Publisher_var m_publisher;
+  %(Topic_name)s::%(Request_name)sTypeSupport_var m_topicSupport;  //  发送类型 Request
+  DDS::Topic_var m_messageTopic;
+  %(Topic_name)s::%(Request_name)sDataWriter_var m_dataWriter;  // Request 写入者
+  DDS::InstanceHandle_t m_topicHandler;
+  int m_counter = 1;
+};
+
+#endif // !%(Publisher_def)s_H_
