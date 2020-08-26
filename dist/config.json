@@ -1,9 +1,0 @@
-{
-    "template_file": "widget_template.txt",
-    "file_name": " SoapMsg",
-    "XXXPublisher": " SoapMsg_Publisher",
-    "Topic": " SoapMsg",
-    "Struct_name": "SoapMsgerRequest",
-    "XXXSubscriber": " SoapMsg_Subscriber",
-    "Struct_name1": "SoapMsgerResult"
-}
